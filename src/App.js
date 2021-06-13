@@ -1,11 +1,14 @@
 import React from "react";
+import Header from "./components/Header";
+// import Main from "./components/Main"
 import './App.css';
 
 function App() {
   return (
-    <div>
-{/* this will hold what goes into div root ie components of app: Wrapper > Header > Main */}
-    </div>
+    <>
+      <Header />
+      {/* <Main /> */}
+    </>
   );
 }
 
