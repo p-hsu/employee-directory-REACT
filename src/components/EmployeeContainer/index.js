@@ -1,11 +1,34 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import EmployeeData from "../EmployeeData";
-// import API from "../../utils/API";
+import API from "../../utils/API"
 
-function EmployeeContainer() {
+function EmployeeContainer(props) {
+
+    const [employees, setEmployees] = useState("");
+    // const [ascending, setAscending] = useState(false);
+
+    // function sortByLastName() {
+    //     if (ascending) {
+    //         const sortedNames = [...employees];
+    //         sortedNames.sort((a, b) => {
+    //             return (a.name.last).localeCompare((b.name.last))
+    //         })
+    //     }
+    // }
+
+    useEffect ( () => {
+        API.getEmployees()
+        .then(target => {
+            setEmployees(target.data.results);
+            console.log(target.data.results);
+        })
+        .catch(err => console.error("Error fetching data:" + err))
+    }, []);
+
+
     return (
     <div className="container">
-        <table class="table table-striped">
+        <table className="table table-striped">
             <thead>
                 <tr>
                 <th scope="col">Photo</th>
@@ -15,7 +38,7 @@ function EmployeeContainer() {
                 </tr>
             </thead>
             <tbody>
-                <EmployeeData />
+                { employees.length ? <EmployeeData employees = {employees} setEmployees = {setEmployees} search = {props.search} /> : null}
             </tbody>
         </table>
     </div>
