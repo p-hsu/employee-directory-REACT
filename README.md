@@ -26,7 +26,7 @@ A employee directory generated using the "Random User API" and pure React > crea
 
 ## Deployment
 
-https://p-hsu.github.io/employee-directory-REACT
+https://p-hsu.github.io/employee-directory-REACT/
 
 ****
 
