@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "https://randomuser.me/api/?inc=picture,name,phone,email&results=15";
+const URL = "https://randomuser.me/api/?inc=picture,name,phone,email&results=20";
 
 const apiCall = {
   getEmployees: function() {
