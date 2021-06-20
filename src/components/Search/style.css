@@ -1,5 +1,6 @@
 form {
     margin: 20px 280px 20px 300px;
+    justify-content: center;
 }
 
 .form-control {
@@ -12,13 +13,17 @@ form {
     box-shadow: inset 0 0 1px 2px rgb(16, 92, 155);
 }
 
+input.form-control {
+    flex-shrink: 0;
+}
+
 .btn {
     color: black;
     border: rgb(13, 74, 124) 2px solid;
 }
 
 .btn:hover {
-    color: rgb(248, 203, 55);
-    background-color:rgb(13, 74, 124);
+    color: rgb(9, 56, 94);
+    background-color:rgba(208, 228, 245, 0.863);
     border:  rgb(2, 44, 78) 2px solid;
 }

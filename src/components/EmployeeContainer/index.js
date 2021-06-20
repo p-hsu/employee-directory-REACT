@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import "./style.css"
 import EmployeeData from "../EmployeeData";
 import API from "../../utils/API"
 
@@ -36,7 +37,7 @@ function EmployeeContainer(props) {
             <thead>
                 <tr>
                 <th scope="col">Photo</th>
-                <th scope="col" onClick={sortByLastName}>Name</th>
+                <th scope="col" onClick={sortByLastName}>Name <i class="arrow down"></i></th>
                 <th scope="col">Phone#</th>
                 <th scope="col">Email</th>
                 </tr>
