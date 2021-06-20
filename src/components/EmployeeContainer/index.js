@@ -37,7 +37,7 @@ function EmployeeContainer(props) {
             <thead>
                 <tr>
                 <th scope="col">Photo</th>
-                <th scope="col" onClick={sortByLastName}>Name <i class="arrow down"></i></th>
+                <th scope="col" onClick={sortByLastName}>Name <i className="arrow down"></i></th>
                 <th scope="col">Phone#</th>
                 <th scope="col">Email</th>
                 </tr>
